@@ -49,11 +49,11 @@ jobs:
           command: |
             . venv/bin/activate
             nosetests test/test_api.py
-
-    - post:
-        - coverage run src/*.py
-        - coverage report
-        - coveralls
+           
+     # send coverage data to the Coveralls service after our tests run
+     - run: coverage run src/*.py
+     - run: coverage report
+     - run: coveralls
 
       - store_artifacts:
           path: test-reports
