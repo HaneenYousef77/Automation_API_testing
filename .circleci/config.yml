@@ -48,7 +48,12 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            pytest --html=Testing_report.html
+            nosetests test/test_api.py
+
+    - post:
+        - coverage run src/*.py
+        - coverage report
+        - coveralls
 
       - store_artifacts:
           path: test-reports
