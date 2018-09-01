@@ -50,11 +50,11 @@ jobs:
           command: |
             . venv/bin/activate
             nosetests test/test_api.py
-           
-     # send coverage data to the Coveralls service after our tests run
+
+   
       - run:
           name: run_my_tests
-            command: |
+          command: |
             source activate py2
             python test/test_api.py -c -v2 -H
             coveralls
