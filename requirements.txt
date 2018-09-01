@@ -2,3 +2,5 @@ coverage
 coveralls
 nose
 requests
+pytest
+pytest-html
