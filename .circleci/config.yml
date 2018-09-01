@@ -53,12 +53,12 @@ jobs:
 
    
       - run:
-          name: run_my_tests
+          name: gererate report
           command: |
-            source activate py2
-            python test/test_api.py -c -v2 -H
+            coverage run test/test_api.py
+            coverage report
             coveralls
-
+            
       - store_artifacts:
           path: test-reports
           destination: test-reports
