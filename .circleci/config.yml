@@ -49,7 +49,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            nosetests --with-cover --cover-html --cover-packag test/test_api.py
+            nosetests --with-cover --cover-html test/test_api.py
             coveralls
             
       - store_artifacts:
