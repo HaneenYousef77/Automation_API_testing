@@ -52,12 +52,12 @@ jobs:
             nosetests test/test_api.py
            
      # send coverage data to the Coveralls service after our tests run
-     - run:
-        name: run_my_tests
-        command: |
-          source activate py2
-          python test/test_api.py -c -v2 -H
-          coveralls
+      - run:
+          name: run_my_tests
+            command: |
+            source activate py2
+            python test/test_api.py -c -v2 -H
+            coveralls
 
       - store_artifacts:
           path: test-reports
