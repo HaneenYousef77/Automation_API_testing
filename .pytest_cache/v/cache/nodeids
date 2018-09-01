@@ -1,0 +1,15 @@
+[
+  "test/test_api.py::test_get_users_list", 
+  "test/test_api.py::test_get_single_user", 
+  "test/test_api.py::test_get_not_found_user", 
+  "test/test_api.py::test_get_resource_list", 
+  "test/test_api.py::test_get_single_resource", 
+  "test/test_api.py::test_get_not_found_resource", 
+  "test/test_api.py::test_delete_user", 
+  "test/test_api.py::test_create_user", 
+  "test/test_api.py::test_register_successful", 
+  "test/test_api.py::test_register_unsuccessful", 
+  "test/test_api.py::test_login_successful", 
+  "test/test_api.py::test_login_unsuccessful", 
+  "test/test_api.py::test_delay_response"
+]
