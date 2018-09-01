@@ -49,8 +49,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            nosetests --cover-tests --cover-html test/test_api.py
-            coveralls
+           pytest --html=Testing_report.html
             
       - store_artifacts:
           path: test-reports
