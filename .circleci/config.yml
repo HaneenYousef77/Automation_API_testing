@@ -50,6 +50,13 @@ jobs:
           command: |
             . venv/bin/activate
             nosetests test/test_api.py
+            
+      - run:
+          name: gererate report
+          command: |
+            coverage run test/test_api.py
+            coverage report
+            coveralls
       
       - store_artifacts:
           path: test-reports
